@@ -137,6 +137,7 @@ app.delete('/api/tasks/:id', (req, res) => {
     });
 });
 
-app.listen(port, () => {
-    console.log(`Servidor rodando na porta ${port}`);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Servidor rodando na porta ${PORT}`);
 });
